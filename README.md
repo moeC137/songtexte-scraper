@@ -2,7 +2,7 @@
 fetches songs from songtexte 
 
 generating: link list for all songs
-for ((i=1;i<=3;i++)); do  curl   https://www.songtexte.com/artist/kiz-43d6e377.html?page=$i  | grep songtext/kiz ; done |grep -o -P '(?<=../).*(?=" )'
+for ((i=1;i<=3;i++)); do  curl   https://www.songtexte.com/artist/kiz-43d6e377.html?page=$i  | grep songtext/kiz ; done |grep -o -P '(?<="..).*(?=" )' > linklist.txt
 
 downloading lyrics:
 
